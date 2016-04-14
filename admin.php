@@ -57,8 +57,8 @@ if($query&&mysqli_num_rows($query)){
                 <a href="admin.php"><h3>后台管理</h3></a>
             </div>
             <div class="col-md-2 pull-right" style="margin-top: 20px;margin-bottom: 10px;">
-                <form action="userlist.php" method="post">
-                    <input type="submit" class="col-md-6 btn btn-default" value=<?php echo $_COOKIE["loginname"]; ?> />
+                <form >
+                    <div class="col-md-6 btn btn-default" ><?php echo $_COOKIE["loginname"]; ?></div>
                 </form>
                 <form action="exit.php" method="post">
                     <input class="col-md-6 btn btn-default" type="submit" value="登出"/>
