@@ -18,7 +18,7 @@ if($query&&mysqli_num_rows($query)){
 	while($row=mysqli_fetch_row($query)){
 		// $data[]=$row;
 		 // print_r($loginname);
-		print_r($row);
+		// print_r($row);
 		if(!strcmp($row[1],$number)){
 			echo "<script>alert('当天教室不可用');window.location.href='user.php'</script>";
 			$flag=1;
@@ -32,7 +32,7 @@ if($query&&mysqli_num_rows($query)){
 	}
 
 }else{
-	print_r($_POST);
+	// print_r($_POST);
 	$sql=" insert into orderlist (roomnum,username,ordertime) values ('$number','$loginname','2016-$month-$day')";
 	mysqli_query($con,$sql);
 	echo"<script> alert(' 预约成功');window.location.href='user.php';</script>";

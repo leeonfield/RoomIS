@@ -64,32 +64,34 @@ if($query&&mysqli_num_rows($query)){
 				</form>
 			</div>
 		</div>
-        <div class="col-md-12 " style="background-color: #DDE3EB; margin-top:10px;border-radius: 8px;">
-        	<div class="col-md-2 text-center col-md-offset-3"><h4>教室</h4></div>
-        	<div class="col-md-2 text-center"><h4>预约时间</h4></div>
-        	<div class="col-md-2 col-md-offset-1 "><h4>取消</h4></div>
-        </div>
-        <div class="col-md-12 text-center" style="overflow:scroll;overflow-x:hidden;  height: 480px;">
-        	<?php
-        	foreach ($data as $value) {
-        		?>
-        		<form class="col-md-12" action="cancel.php" method="post"role="form" style="margin-top: 20px;">
-        			<div class="col-md-2 text-center col-md-offset-3" style="line-height:30px;border:0;" ><?php echo $value['roomnum']; ?></div>
-        			<div class="col-md-2 " style="padding-left: 40px;">
-        				<div class="col-md-1"><?php echo $value['ordertime'][5];echo $value['ordertime'][6]; ?></div>
-        				<div class="col-md-1">月</div>
-        				<div class="col-md-1 " ><?php echo $value['ordertime'][8];echo $value['ordertime'][9]; ?></div>
-        			</div>
-        			<input  type="hidden" name="number" style="width: 0px;" value=<?php echo $value['roomnum']; ?> />
-        			<input  type="hidden" name="month" style="width: 0px;" value=<?php echo $value['ordertime'][5];echo $value['ordertime'][6]; ?> />
-        			<input  type="hidden" name="day" style="width: 0px;" value=<?php echo $value['ordertime'][8];echo $value['ordertime'][9]; ?> />
+		<div class="col-md-12 " style="background-color: #DDE3EB; margin-top:10px;border-radius: 8px;">
+			<div class="col-md-2 text-center col-md-offset-3"><h4>教室</h4></div>
+			<div class="col-md-2 text-center"><h4>预约时间</h4></div>
+			<div class="col-md-2 col-md-offset-1 "><h4>取消</h4></div>
+		</div>
+		<div class="col-md-12 text-center" style="overflow:scroll;overflow-x:hidden;  height: 480px;">
+			<?php
+			if(!empty($data)){
+				foreach ($data as $value) {
+					?>
+					<form class="col-md-12" action="cancel.php" method="post"role="form" style="margin-top: 20px;">
+						<div class="col-md-2 text-center col-md-offset-3" style="line-height:30px;border:0;" ><?php echo $value['roomnum']; ?></div>
+						<div class="col-md-2 " style="padding-left: 40px;">
+							<div class="col-md-1"><?php echo $value['ordertime'][5];echo $value['ordertime'][6]; ?></div>
+							<div class="col-md-1">月</div>
+							<div class="col-md-1 " ><?php echo $value['ordertime'][8];echo $value['ordertime'][9]; ?></div>
+						</div>
+						<input  type="hidden" name="number" style="width: 0px;" value=<?php echo $value['roomnum']; ?> />
+						<input  type="hidden" name="month" style="width: 0px;" value=<?php echo $value['ordertime'][5];echo $value['ordertime'][6]; ?> />
+						<input  type="hidden" name="day" style="width: 0px;" value=<?php echo $value['ordertime'][8];echo $value['ordertime'][9]; ?> />
 
-        			<input type="submit" class="btn btn-danger col-md-1 col-md-offset-1" value="取消" />
-        		</form>
-        		<?php
-        	}
-        	?>
-        </div>
-    </div>
+						<input type="submit" class="btn btn-danger col-md-1 col-md-offset-1" value="取消" />
+					</form>
+					<?php
+				}
+			}
+			?>
+		</div>
+	</div>
 </body>
 </html>
