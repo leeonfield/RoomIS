@@ -13,9 +13,22 @@ if($query&&mysqli_num_rows($query)){
 <head>
     <meta charset="UTF-8">
     <title>西科教室管理系统</title>
-    <script src="jquery1.12/jquery-1.12.2.min.js"></script>
-    <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <!-- <script src="jquery1.12/jquery-1.12.2.min.js"></script> -->
+    <!-- <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css"> -->
+   <!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+   <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+   <!-- 新 Bootstrap 核心 CSS 文件 -->
+   <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+   <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+   <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+   <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+   <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+   <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+   <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
 <style>
@@ -55,11 +68,11 @@ if($query&&mysqli_num_rows($query)){
                 <h3>教室预约</h3>
             </div>
             <div class="col-md-2 pull-right" style="margin-top: 20px;margin-bottom: 10px;">
-            <form action="userlist.php" method="post">
+                <form action="userlist.php" method="post">
 
-                <input type="submit" class="col-md-6 btn btn-default" value=<?php echo $_COOKIE["loginname"]; ?> />
+                    <input type="submit" class="col-md-6 btn btn-default" value=<?php echo $_COOKIE["loginname"]; ?> />
 
-            </form>
+                </form>
                 <form action="exit.php" method="post">
                     <input class="col-md-6 btn btn-default" type="submit" value="登出"/>
                 </form>

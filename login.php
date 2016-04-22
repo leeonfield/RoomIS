@@ -10,7 +10,7 @@ $query=mysqli_query($con,$selectuser);
 if($query&&mysqli_num_rows($query)){
 	$userinfo=mysqli_fetch_row($query);
 	if(!strcmp($userinfo[2],$password)){
-		// print_r(mysqli_fetch_row($query));
+	// print_r(mysqli_fetch_row($query));
 		if($userinfo[3]){
 			setcookie("loginname",$userinfo[1]);
 

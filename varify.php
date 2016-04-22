@@ -1,7 +1,0 @@
-<?php
-
-require('connect.php');
-
-
-
-?>

@@ -8,7 +8,7 @@ $month=$_POST['month'];
 $day=$_POST['day'];
 $loginname=$_COOKIE['loginname'];
 $flag=0;
-
+// print_r($day);
 // $checksql="select * from orderlist where roomnum='$number'";
 $checksql="select * from orderlist where ordertime='2016-$month-$day'";
 $query=mysqli_query($con,$checksql);
