@@ -1,14 +1,13 @@
 
-## 教室管理系统
+## RoomIS
 
-计划:
-- 界面用HTMl
-- ~~数据库用oracle~~
-- 数据库用mysql
-- 后台用PHP
-- 两个版本[用户/管理员]
+Todo:
+- Bootstrap
+- mysql
+- PHP
+- user / admin
 
-完成：
+Status：
 - 
 
 ## RoomIS
@@ -23,11 +22,11 @@ Tools：
 
 
 
-用户[User]：
+User：
 ![](http://7xlkdt.com1.z0.glb.clouddn.com/16-4-14/74847164.jpg)
 ![](http://7xlkdt.com1.z0.glb.clouddn.com/16-4-14/71362207.jpg)
 ![](http://7xlkdt.com1.z0.glb.clouddn.com/16-4-14/44643542.jpg)
 
-管理员[Admin]：
+Admin：
 ![](http://7xlkdt.com1.z0.glb.clouddn.com/16-4-22/62981708.jpg)
 ![](http://7xlkdt.com1.z0.glb.clouddn.com/16-4-22/51203863.jpg)
